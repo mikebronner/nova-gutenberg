@@ -1,0 +1,39 @@
+{
+    "name": "genealabs/nova-gutenberg",
+    "description": "Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.",
+    "keywords": [
+        "laraberg",
+        "laravel",
+        "nova"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://nova.laravel.com"
+        }
+    ],
+    "require": {
+        "laravel/nova": "*",
+        "php": ">=7.1.0",
+        "symfony/thanks": "*",
+        "van-ons/laraberg": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "GeneaLabs\\NovaGutenberg\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "GeneaLabs\\NovaGutenberg\\FieldServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
