@@ -1,5 +1,5 @@
 # Nova Gutenberg
-Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.
+Implementation of the Gutenberg editor as a Laravel Nova Field based on [Laraberg](https://github.com/VanOns/laraberg).
 
 ## Requirements
 - Laravel Nova
