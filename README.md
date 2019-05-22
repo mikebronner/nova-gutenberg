@@ -27,7 +27,8 @@ class BlogPost extends Resource
     {
         return [
             // ...
-            Gutenberg::make("Content"),
+            Gutenberg::make("Content")
+                ->onlyOnForms(),
             // ...
         ];
     }
