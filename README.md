@@ -7,8 +7,8 @@ Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg
 
 ## Implemented Functionality
 - [X] Editor field in form.
-- [ ] Field on index listing.
-- [ ] Field on resource display.
+- [ ] Field on index listing (coming soon).
+- [ ] Field on resource display (coming soon).
 
 ## Installation
 ```sh
