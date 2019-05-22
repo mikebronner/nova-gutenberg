@@ -5,6 +5,11 @@ Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg
 - Laravel Nova
 - PHP 7.1.0+
 
+## Implemented Functionality
+- [X] Editor field in form.
+- [ ] Field on index listing.
+- [ ] Field on resource display.
+
 ## Installation
 ```sh
 composer require genealabs/nova-gutenberg:*
