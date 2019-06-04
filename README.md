@@ -1,9 +1,14 @@
 # Nova Gutenberg
-Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.
+Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a Laravel Nova Field based on [Laraberg](https://github.com/VanOns/laraberg).
 
 ## Requirements
 - Laravel Nova
 - PHP 7.1.0+
+
+## Implemented Functionality
+- [X] Editor field in form.
+- [ ] Field on index listing (coming soon).
+- [ ] Field on resource display (coming soon).
 
 ## Installation
 ```sh
@@ -22,7 +27,8 @@ class BlogPost extends Resource
     {
         return [
             // ...
-            Gutenberg::make("Content"),
+            Gutenberg::make("Content")
+                ->onlyOnForms(),
             // ...
         ];
     }
