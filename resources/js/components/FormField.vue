@@ -1,30 +1,17 @@
-<template>
-    <default-field
-        :field="field"
-        :errors="errors"
-        :fullWidthContent="true"
-    >
-        <template
-            slot="field"
-        >
-            <textarea
-                :id="field.name"
-                v-model="value"
-                class="hidden"
-                :class="errorClasses"
-                :placeholder="field.name"
-            ></textarea>
-        </template>
-    </default-field>
-</template>
-
 <script>
 import { FormField, HandlesValidationErrors } from 'laravel-nova'
 
 export default {
-    mixins: [FormField, HandlesValidationErrors],
+    mixins: [
+        FormField,
+        HandlesValidationErrors,
+    ],
 
-    props: ['resourceName', 'resourceId', 'field'],
+    props: [
+        'field',
+        'resourceId',
+        'resourceName',
+    ],
 
     mounted: function () {
         Laraberg.init(this.field.name);
@@ -42,15 +29,32 @@ export default {
          * Fill the given FormData object with the field's internal value.
          */
         fill(formData) {
-            formData.append(this.field.attribute, this.value || '')
+            formData.append(this.field.attribute, Laraberg.getContent())
         },
 
-        /**
-         * Update the field's internal value.
-         */
         handleChange(value) {
             this.value = value
         },
     },
 }
 </script>
+
+<template>
+    <default-field
+        :field="field"
+        :errors="errors"
+        :fullWidthContent="true"
+    >
+        <template
+            slot="field"
+        >
+            <textarea
+                ref="content"
+                :value="value"
+                :name="field.name"
+                :id="field.name"
+                :placeholder="field.name"
+            ></textarea>
+        </template>
+    </default-field>
+</template>
