@@ -18,21 +18,15 @@ export default {
     },
 
     methods: {
-        /*
-         * Set the initial, internal value for the field.
-         */
-        setInitialValue() {
+        setInitialValue: function () {
             this.value = this.field.value || '';
         },
 
-        /**
-         * Fill the given FormData object with the field's internal value.
-         */
-        fill(formData) {
+        fill: function (formData) {
             formData.append(this.field.attribute, Laraberg.getContent())
         },
 
-        handleChange(value) {
+        handleChange: function (value) {
             this.value = value
         },
     },
