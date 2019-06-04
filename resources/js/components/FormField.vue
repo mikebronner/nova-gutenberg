@@ -13,6 +13,13 @@ export default {
         'resourceName',
     ],
 
+    created: function () {
+        if (Laraberg.editor != null) {
+            // TODO: figure out how to reset Gutenberg editor without reloading
+            window.location.reload();
+        }
+    },
+
     mounted: function () {
         Laraberg.init(this.field.name);
     },
@@ -23,11 +30,11 @@ export default {
         },
 
         fill: function (formData) {
-            formData.append(this.field.attribute, Laraberg.getContent())
+            formData.append(this.field.attribute, Laraberg.getContent());
         },
 
         handleChange: function (value) {
-            this.value = value
+            this.value = value;
         },
     },
 }
