@@ -14,10 +14,8 @@ export default {
     ],
 
     created: function () {
-        if (Laraberg.editor != null) {
-            // TODO: figure out how to reset Gutenberg editor without reloading
-            window.location.reload();
-        }
+        window.Laraberg.editor = null;
+        window.wp = null;
     },
 
     mounted: function () {
