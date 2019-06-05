@@ -1,5 +1,8 @@
 <template>
-    <span>{{ field.value }}</span>
+    <excerpt
+        :content="field.value"
+        :should-show="field.shouldShow"
+    ></excerpt>
 </template>
 
 <script>
