@@ -14,9 +14,10 @@
         }
     ],
     "require": {
-        "laravel/nova": "*",
         "php": ">=7.1.0",
+        "laravel/nova": "*",
         "symfony/thanks": "*",
+        "unisharp/laravel-filemanager": "*",
         "van-ons/laraberg": "*"
     },
     "autoload": {

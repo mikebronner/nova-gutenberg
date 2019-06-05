@@ -9,15 +9,27 @@ Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a 
 - [X] Editor field in form.
 - [X] Field on index listing.
 - [X] Field on resource display.
-- [ ] Image upload functionality.
+- [X] Image upload functionality.
 
 ## Limitations
-**Currently you can only have one Gutenberg field on a given page, due to how the Gutenberg library is implemented. Efforts are being made to address this upstream, but it has yet to be determined if that is possible.**
+1. Currently you can only have one Gutenberg field on a given page, due to how
+  the Gutenberg library is implemented. Efforts are being made to address this
+  upstream, but it has yet to be determined if that is possible.
+2. The editor UI still allows and prompts for drag-and-drop functionality.
+  Unfortunately that is currently not functional, and the Media Library button
+  must be used instead.
 
 ## Installation
-```sh
-composer require genealabs/nova-gutenberg:*
-```
+1. Install the package:
+  ```sh
+  composer require genealabs/nova-gutenberg:*
+  ```
+
+2. Publish Laravel FileManager's assets and config:
+  ```sh
+  php artisan vendor:publish --tags=lfm_config
+  php artisan vendor:publish --tags=lfm_public
+  ```
 
 ## Usage
 ```php
