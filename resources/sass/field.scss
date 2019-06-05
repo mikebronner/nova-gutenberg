@@ -8,3 +8,10 @@
 .edit-post-header {
     background: transparent !important;
 }
+
+.components-drop-zone,
+.components-form-file-upload,
+.editor-media-placeholder .components-placeholder__instructions {
+    display: none;
+    pointer-events: none;
+}
