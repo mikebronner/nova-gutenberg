@@ -10,6 +10,9 @@ Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a 
 - [ ] Field on index listing (coming soon).
 - [ ] Field on resource display (coming soon).
 
+## Limitations
+**Currently you can only have one Gutenberg field on a given page, due to how the Gutenberg library is implemented. Efforts are being made to address this upstream, but it has yet to be determined if that is possible.**
+
 ## Installation
 ```sh
 composer require genealabs/nova-gutenberg:*
