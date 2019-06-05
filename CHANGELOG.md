@@ -4,6 +4,10 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/)
 and this project adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [0.1.4] - 2019-06-04
+### Changed
+- Added styling to match Nova input field standards.
+
 ## [0.1.3] - 2019-06-04
 ### Fixed
 - Resolved issue with editing content, which was previously dealt with by
