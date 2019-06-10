@@ -23,7 +23,9 @@ export default {
 
     mounted: function () {
         Laraberg.init(this.field.name, {
-            laravelFilemanager: true,
+            laravelFilemanager: {
+                prefix: `/${window.Nova.config.lfm.url_prefix}`
+            },
         });
     },
 
