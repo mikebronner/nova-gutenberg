@@ -13,27 +13,18 @@ export default {
         'resourceName',
     ],
 
-    mounted() {
-        Laraberg.editor = null;
+    created: function () {
+        if (window.Laraberg.editor != null) {
+            window.location.reload();
+            // window.Laraberg.editor = null;
+            // window.wp = null;
+        }
+    },
 
-        wp.blocks.getBlockTypes().forEach(block => {
-            wp.blocks.unregisterBlockType(block.name)
-        });
-
+    mounted: function () {
         Laraberg.init(this.field.name, {
-            laravelFilemanager: {
-                prefix: `/${window.Nova.config.lfm.url_prefix}`
-            },
+            laravelFilemanager: true,
         });
-        
-        let blocks = wp.blocks.rawHandler({ HTML: this.value });
-        wp.data.dispatch('core/editor').resetBlocks(blocks);
-
-        // This prevents the page from warning over unsaved changes... and the
-        // timeout prevents an error...
-        setTimeout(function () {
-            wp.data.dispatch('core/editor').savePost();
-        }, 250);
     },
 
     methods: {
@@ -43,7 +34,6 @@ export default {
 
         fill: function (formData) {
             formData.append(this.field.attribute, Laraberg.getContent());
-            wp.data.dispatch('core/editor').resetBlocks([]);
         },
 
         handleChange: function (value) {
