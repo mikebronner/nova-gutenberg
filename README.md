@@ -27,8 +27,8 @@ Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a 
 
 2. Publish Laravel FileManager's assets and config:
   ```sh
-  php artisan vendor:publish --tags=lfm_config
-  php artisan vendor:publish --tags=lfm_public
+  php artisan vendor:publish --tag=lfm_config
+  php artisan vendor:publish --tag=lfm_public
   ```
 
 ## Usage
