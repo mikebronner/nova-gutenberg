@@ -14,11 +14,11 @@ export default {
     ],
 
     created: function () {
-        if (window.Laraberg.editor != null) {
-            window.location.reload();
-            // window.Laraberg.editor = null;
-            // window.wp = null;
-        }
+        // if (window.Laraberg.editor != null) {
+        //     window.location.reload();
+        //     // window.Laraberg.editor = null;
+        //     // window.wp = null;
+        // }
     },
 
     mounted: function () {
