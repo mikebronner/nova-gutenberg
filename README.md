@@ -1,6 +1,8 @@
 # Nova Gutenberg
 Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a Laravel Nova Field based on [Laraberg](https://github.com/VanOns/laraberg).
 
+![Gutenberg For Laravel Nova masthead image.](https://repository-images.githubusercontent.com/188099261/91913580-f1b8-11e9-8e2e-9a3f6e6da8c2)
+
 ## Requirements
 - Laravel Nova
 - PHP 7.1.0+
