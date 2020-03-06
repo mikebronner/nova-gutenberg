@@ -17,7 +17,7 @@
         "laravel/nova": "^3.0",
         "symfony/thanks": "^1.2",
         "unisharp/laravel-filemanager": "^1.9",
-        "van-ons/laraberg": "0.0.6-beta"
+        "van-ons/laraberg": "1.0.3"
     },
     "autoload": {
         "psr-4": {
