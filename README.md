@@ -24,7 +24,7 @@ Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a 
 ## Installation
 1. Install the package:
   ```sh
-  composer require genealabs/nova-gutenberg:*
+  composer require genealabs/nova-gutenberg
   ```
 
 2. Publish Laravel FileManager's assets and config:
