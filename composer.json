@@ -19,8 +19,8 @@
     ],
     "require": {
         "laravel/nova": "^3.0",
-        "unisharp/laravel-filemanager": "2.0",
-        "van-ons/laraberg": "1.1.0"
+        "unisharp/laravel-filemanager": "^2.0",
+        "van-ons/laraberg": "^1.1"
     },
     "autoload": {
         "psr-4": {
