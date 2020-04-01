@@ -9,10 +9,6 @@
     "license": "MIT",
     "repositories": [
         {
-            "type": "git",
-            "url": "https://github.com/bmichotte/laravel-filemanager.git"
-        },
-        {
             "type": "composer",
             "url": "https://nova.laravel.com"
         }
