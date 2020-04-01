@@ -9,15 +9,18 @@
     "license": "MIT",
     "repositories": [
         {
+            "type": "git",
+            "url": "https://github.com/bmichotte/laravel-filemanager.git"
+        },
+        {
             "type": "composer",
             "url": "https://nova.laravel.com"
         }
     ],
     "require": {
         "laravel/nova": "^3.0",
-        "symfony/thanks": "^1.2",
-        "unisharp/laravel-filemanager": "^1.9",
-        "van-ons/laraberg": "0.0.6-beta"
+        "unisharp/laravel-filemanager": "*",
+        "van-ons/laraberg": "1.0.3"
     },
     "autoload": {
         "psr-4": {
