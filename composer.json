@@ -19,7 +19,7 @@
     ],
     "require": {
         "laravel/nova": "^3.0",
-        "unisharp/laravel-filemanager": "2.0",
+        "unisharp/laravel-filemanager": "dev-master",
         "van-ons/laraberg": "1.1.0"
     },
     "autoload": {
