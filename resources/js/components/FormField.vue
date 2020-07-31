@@ -13,14 +13,6 @@ export default {
         'resourceName',
     ],
 
-    created: function () {
-        if (window.Laraberg.editor != null) {
-            window.location.reload();
-            // window.Laraberg.editor = null;
-            // window.wp = null;
-        }
-    },
-
     mounted: function () {
         Laraberg.init(this.field.name, {
             laravelFilemanager: true,
