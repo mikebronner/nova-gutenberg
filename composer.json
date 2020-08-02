@@ -41,6 +41,12 @@
             ]
         }
     },
+    "scripts": {
+        "post-update-cmd": [
+            "sed -i 's/\\/\\/\\# sourceMappingURL=laraberg.js.map//g' ./dist/js/laraberg.js",
+            "sed -i 's/\\/\\*\\# sourceMappingURL=laraberg.css.map\\*\\///g' ./dist/css/laraberg.css"
+        ]
+    },
     "config": {
         "sort-packages": true
     },

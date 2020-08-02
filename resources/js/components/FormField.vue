@@ -45,11 +45,10 @@ export default {
             slot="field"
         >
             <textarea
-                ref="content"
-                :value="value"
-                :name="field.name"
                 :id="field.name"
+                :name="field.name"
                 :placeholder="field.name"
+                :value="value"
             ></textarea>
         </template>
     </default-field>
