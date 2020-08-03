@@ -13,7 +13,20 @@ export default {
         'resourceName',
     ],
 
-    mounted: function () {
+    beforeUpdate: function () {
+        const blocks = window.wp.data.select('core/blocks').getBlockTypes().map(bt => bt.name);
+        const {removeBlockTypes} = window.wp.data.dispatch('core/blocks');
+        const {__experimentalTearDownEditor} = window.wp.data.dispatch('core/editor');
+
+        removeBlockTypes(blocks);
+        __experimentalTearDownEditor();
+
+        if (((window.Laraberg || {}).editor || false) !== false) {
+            window.wp.element.unmountComponentAtNode(window.Laraberg.editor);
+        }
+    },
+
+    updated: function () {
         Laraberg.init(this.field.name, {
             laravelFilemanager: true,
         });
