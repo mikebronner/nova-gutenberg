@@ -14,6 +14,7 @@
         }
     ],
     "require": {
+        "cweagans/composer-patches": "^1.6",
         "laravel/nova": "^3.0",
         "symfony/thanks": "^1.2",
         "unisharp/laravel-filemanager": "^2.0",
@@ -39,6 +40,11 @@
             "providers": [
                 "GeneaLabs\\NovaGutenberg\\FieldServiceProvider"
             ]
+        },
+        "patches": {
+            "van-ons/laraberg": {
+                "PR #110: Fix z-index of block popups.": "https://patch-diff.githubusercontent.com/raw/VanOns/laraberg/pull/110.diff"
+            }
         }
     },
     "scripts": {
