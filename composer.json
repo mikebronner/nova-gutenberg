@@ -21,7 +21,6 @@
         "cweagans/composer-patches": "^1.6",
         "laravel/nova": "^3.9",
         "symfony/thanks": "^1.2",
-        "unisharp/laravel-filemanager": "^2.0",
         "van-ons/laraberg": "^1.1"
     },
     "autoload": {
@@ -38,10 +37,6 @@
         "patches": {
             "van-ons/laraberg": {
                 "PR #110: Fix z-index of block popups.": "https://patch-diff.githubusercontent.com/raw/VanOns/laraberg/pull/110.diff"
-            },
-            "unisharp/laravel-filemanager": {
-                "PR #969: Fix Loading of Config": "https://patch-diff.githubusercontent.com/raw/UniSharp/laravel-filemanager/pull/969.diff",
-                "PR #976: Update for Laravel 8": "https://patch-diff.githubusercontent.com/raw/UniSharp/laravel-filemanager/pull/976.diff"
             }
         }
     },
