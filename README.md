@@ -26,12 +26,15 @@ Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a 
   ```sh
   composer require genealabs/nova-gutenberg
   ```
-
-2. Publish Laravel FileManager's assets and config:
-  ```sh
-  php artisan vendor:publish --tag=lfm_config
-  php artisan vendor:publish --tag=lfm_public
+2. Add the following to your scripts section in `composer.json`:
+  ```json
+          "post-package-update": [
+            "@php artisan vendor:publish --provider='VanOns\\Laraberg\\LarabergServiceProvider' --tag='public' --force",
+            "@php artisan vendor:publish --tag=lfm_config",
+            "@php artisan vendor:publish --tag=lfm_public"
+        ]
   ```
+3. Run `composer update`.
 
 ## Usage
 ```php
