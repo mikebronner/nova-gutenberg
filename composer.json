@@ -40,7 +40,8 @@
                 "PR #110: Fix z-index of block popups.": "https://patch-diff.githubusercontent.com/raw/VanOns/laraberg/pull/110.diff"
             },
             "unisharp/laravel-filemanager": {
-                "PR #969: Fix Loading of Config": "https://patch-diff.githubusercontent.com/raw/UniSharp/laravel-filemanager/pull/969.diff"
+                "PR #969: Fix Loading of Config": "https://patch-diff.githubusercontent.com/raw/UniSharp/laravel-filemanager/pull/969.diff",
+                "PR #976: Update for Laravel 8": "https://patch-diff.githubusercontent.com/raw/UniSharp/laravel-filemanager/pull/976.diff"
             }
         }
     },
