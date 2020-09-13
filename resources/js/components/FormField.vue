@@ -33,10 +33,12 @@ export default {
     },
 
     mounted: function () {
+        this.blankLaraberg = Object.assign({}, window.Laraberg);
         this.initializeEditor();
     },
 
     updated: function () {
+        window.Laraberg = Object.assign({}, this.blankLaraberg);
         this.initializeEditor();
     },
 

@@ -9,6 +9,13 @@
     background: transparent !important;
 }
 
+.edit-post-header > .components-button {
+    display: none;
+}
+.edit-post-header .edit-post-header-toolbar__inserter-toggle {
+    border-radius: 999px;
+}
+
 .components-drop-zone,
 .components-form-file-upload,
 .editor-media-placeholder .components-placeholder__instructions {
