@@ -1,4 +1,8 @@
 {
     "/js/field.js": "/js/field.js",
-    "/css/field.css": "/css/field.css"
+    "/css/field.css": "/css/field.css",
+    "/css/laraberg.css": "/css/laraberg.css",
+    "/css/laraberg.css.map": "/css/laraberg.css.map",
+    "/js/laraberg.js": "/js/laraberg.js",
+    "/js/laraberg.js.map": "/js/laraberg.js.map"
 }
