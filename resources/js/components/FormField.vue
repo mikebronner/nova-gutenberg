@@ -13,6 +13,12 @@ export default {
         'resourceName',
     ],
 
+    data: function () {
+        return {
+            blankLaraberg: {},
+        };
+    },
+
     beforeUpdate: function () {
         const blocks = window.wp.data.select('core/blocks').getBlockTypes().map(bt => bt.name);
         const {removeBlockTypes} = window.wp.data.dispatch('core/blocks');
@@ -26,13 +32,27 @@ export default {
         }
     },
 
+    mounted: function () {
+        this.initializeEditor();
+    },
+
     updated: function () {
-        Laraberg.init(this.field.name, {
-            laravelFilemanager: true,
-        });
+        this.initializeEditor();
     },
 
     methods: {
+        initializeEditor: function () {
+            let editor = document.getElementById("laraberg__editor");
+
+            if (editor !== null) {
+                editor.remove();
+            }
+
+            Laraberg.init(this.field.name, {
+                laravelFilemanager: true,
+            });
+        },
+
         setInitialValue: function () {
             this.value = this.field.value || '';
         },
