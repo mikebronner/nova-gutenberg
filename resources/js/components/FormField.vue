@@ -20,46 +20,74 @@ export default {
   },
 
   beforeUpdate: function () {
+    console.log("IM UPDATING SO IMP")
     this.removeEditor();
   },
 
   mounted: function () {
     this.blankLaraberg = Object.assign({}, window.Laraberg);
+    console.log("IM MOUNTED SO IMP")
     this.initializeEditor();
+  },
+
+  beforeDestroy: () => {
+    console.log("IM GETTING DESTROYED SO IMP")
+    // This is required as this.removeEditor might not be available in some cases
+    try {
+      const blocks = window.wp.data.select('core/blocks').getBlockTypes().map(bt => bt.name);
+      const {removeBlockTypes} = window.wp.data.dispatch('core/blocks');
+      const {__experimentalTearDownEditor, resetBlocks} = window.wp.data.dispatch('core/editor');
+
+      removeBlockTypes(blocks);
+      __experimentalTearDownEditor();
+      resetBlocks( parse(this.value) );
+
+    } catch (e) {}
+    if (((window.Laraberg || {}).editor || false) !== false) {
+      window.wp.element.unmountComponentAtNode(window.Laraberg.editor);
+    }
+    window.Laraberg.editor = undefined
   },
 
   updated: function () {
     window.Laraberg = Object.assign({}, this.blankLaraberg);
+    console.log("IM UPDATED SO IMP")
     this.initializeEditor();
+    if(this.value != "") {
+      Laraberg.setContent(this.value)
+    }
   },
 
   methods: {
     initializeEditor: function () {
       let editor = document.getElementById("laraberg__editor");
-      this.removeEditor();
 
       if (editor !== null) {
+        this.removeEditor();
         editor.remove();
       }
-
       Laraberg.init(this.field.name, {
         laravelFilemanager: true,
       });
+      const { toggleFeature } = window.wp.data.dispatch('core/edit-post');
+      const { isFeatureActive } = wp.data.select( 'core/edit-post' );
+      this.field.disable_welcome && isFeatureActive("welcomeGuide") && toggleFeature('welcomeGuide');
     },
     removeEditor: function () {
-      // Don't wanna break everything just because something goes wrong here
       try {
         const blocks = window.wp.data.select('core/blocks').getBlockTypes().map(bt => bt.name);
         const {removeBlockTypes} = window.wp.data.dispatch('core/blocks');
-        const {__experimentalTearDownEditor} = window.wp.data.dispatch('core/editor');
+        const {__experimentalTearDownEditor, resetBlocks} = window.wp.data.dispatch('core/editor');
 
         removeBlockTypes(blocks);
         __experimentalTearDownEditor();
+        resetBlocks( parse(this.value) );
 
-        if (((window.Laraberg || {}).editor || false) !== false) {
-          window.wp.element.unmountComponentAtNode(window.Laraberg.editor);
-        }
       } catch (e) {}
+      if (((window.Laraberg || {}).editor || false) !== false) {
+        window.wp.element.unmountComponentAtNode(window.Laraberg.editor);
+      }
+      window.Laraberg.editor = undefined
     },
     setInitialValue: function () {
       this.value = this.field.value || '';
@@ -67,6 +95,9 @@ export default {
 
     fill: function (formData) {
       formData.append(this.field.attribute, Laraberg.getContent());
+      // Remove the session item as we no longer need it,
+      // The post will always be 1 as Laraberg is mocking WP API
+      sessionStorage.removeItem("wp-autosave-block-editor-post-1")
     },
 
     handleChange: function (value) {
