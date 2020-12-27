@@ -11,8 +11,8 @@ class Gutenberg extends Field
      */
     public $component = 'nova-gutenberg';
 
-    public function disableWelcome() {
-        $this->withMeta(['disable_welcome' => true]);
+    public function disableWelcome($value = true) {
+        $this->withMeta(['disable_welcome' => $value]);
         return $this;
     }
 }
