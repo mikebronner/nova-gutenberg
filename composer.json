@@ -21,7 +21,7 @@
         "cweagans/composer-patches": "^1.6",
         "laravel/nova": "^3.9",
         "symfony/thanks": "^1.2",
-        "unisharp/laravel-filemanager": "dev-master@dev",
+        "unisharp/laravel-filemanager": "^2.2",
         "van-ons/laraberg": "^1.1"
     },
     "autoload": {
