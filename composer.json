@@ -37,7 +37,7 @@
         },
         "patches": {
             "van-ons/laraberg": {
-                "PR #110: Fix z-index of block popups.": "https://patch-diff.githubusercontent.com/raw/VanOns/laraberg/pull/110.diff"
+                "PR #110: Fix z-index of block popups.": "https://github.com/mikebronner/laraberg/tree/patch-1"
             }
         }
     },
