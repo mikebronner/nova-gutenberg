@@ -1,5 +1,9 @@
-Nova.booting(function (Vue, router, store) {
-    Vue.component('index-nova-gutenberg', require('./components/IndexField'));
-    Vue.component('detail-nova-gutenberg', require('./components/DetailField'));
-    Vue.component('form-nova-gutenberg', require('./components/FormField'));
+import DetailField from './components/DetailField';
+import FormField from './components/FormField';
+import IndexField from './components/IndexField';
+
+Nova.booting(function (app, store) {
+    app.component('index-nova-gutenberg', IndexField);
+    app.component('detail-nova-gutenberg', DetailField);
+    app.component('form-nova-gutenberg', FormField);
 });
