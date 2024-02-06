@@ -10,12 +10,9 @@ export default {
 </script>
 
 <template>
-    <panel-item :field="field">
+    <panel-item :field="field" class="prose max-w-none">
         <template slot="value">
-            <excerpt
-                :content="field.value"
-                :should-show="field.shouldShow"
-            ></excerpt>
+            <excerpt :content="field.value" :should-show="field.shouldShow"></excerpt>
         </template>
     </panel-item>
 </template>

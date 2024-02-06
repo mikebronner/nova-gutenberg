@@ -1,49 +1,53 @@
 {
-    "name": "genealabs/nova-gutenberg",
-    "description": "Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.",
-    "keywords": [
-        "laraberg",
-        "laravel",
-        "nova"
-    ],
-    "license": "MIT",
-    "repositories": [
-        {
-            "type": "composer",
-            "url": "https://nova.laravel.com"
-        },
-        {
-            "type": "path",
-            "url": "../laraberg"
-        }
-    ],
-    "require": {
-        "cweagans/composer-patches": "*",
-        "laravel/nova": "^3.9",
-        "symfony/thanks": "^1.2",
-        "unisharp/laravel-filemanager": "*",
-        "van-ons/laraberg": "*"
+  "name": "genealabs/nova-gutenberg",
+  "description": "Implementation of the Gutenberg editor as a Laravel Nova Field based on Laraberg.",
+  "keywords": [
+    "laraberg",
+    "laravel",
+    "nova"
+  ],
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://nova.laravel.com"
     },
-    "autoload": {
-        "psr-4": {
-            "GeneaLabs\\NovaGutenberg\\": "src/"
-        }
+    {
+      "type": "path",
+      "url": "../laraberg"
+    }
+  ],
+  "require": {
+    "cweagans/composer-patches": "*",
+    "laravel/nova": "^4.0",
+    "symfony/thanks": "^1.2",
+    "unisharp/laravel-filemanager": "*",
+    "van-ons/laraberg": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "GeneaLabs\\NovaGutenberg\\": "src/"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "GeneaLabs\\NovaGutenberg\\FieldServiceProvider"
+      ]
     },
-    "extra": {
-        "laravel": {
-            "providers": [
-                "GeneaLabs\\NovaGutenberg\\FieldServiceProvider"
-            ]
-        },
-        "patches": {
-            "van-ons/laraberg": {
-                "PR #110: Fix z-index of block popups.": "https://github.com/mikebronner/laraberg/tree/patch-1"
-            }
-        }
-    },
-    "config": {
-        "sort-packages": true
-    },
-    "minimum-stability": "dev",
-    "prefer-stable": true
+    "patches": {
+      "van-ons/laraberg": {
+        "PR #110: Fix z-index of block popups.": "https://github.com/mikebronner/laraberg/tree/patch-1"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "allow-plugins": {
+      "cweagans/composer-patches": true,
+      "symfony/thanks": true
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
 }

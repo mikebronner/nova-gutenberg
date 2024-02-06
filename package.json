@@ -1,6 +1,6 @@
 {
   "private": true,
-  "scripts": {
+  "oldscripts": {
     "dev": "npm run development",
     "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
     "watch": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --watch --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
@@ -9,12 +9,25 @@
     "prod": "npm run production",
     "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
   },
+  "scripts": {
+    "dev": "npm run development",
+    "development": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "npm run production",
+    "production": "mix --production",
+    "nova:install": "npm --prefix='../../vendor/laravel/nova' ci"
+  },
   "devDependencies": {
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.0",
+    "@vue/compiler-sfc": "^3.4.15",
     "cross-env": "^5.0.0",
-    "laravel-mix": "^1.0",
-    "laravel-nova": "^1.0",
-    "vue": "^2.5.0"
-  }
+    "form-backend-validation": "^2.4.0",
+    "laravel-mix": "^6.0.49",
+    "postcss": "^8.4.34",
+    "vue-loader": "^16.8.3",
+    "lodash": "^4.17.21",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {}
 }

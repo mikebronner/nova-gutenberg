@@ -1,9 +1,18 @@
-<?php namespace GeneaLabs\NovaGutenberg;
+<?php
 
+namespace GeneaLabs\NovaGutenberg;
+
+use Laravel\Nova\Fields\Text;
 use Laravel\Nova\Fields\Field;
+use Laravel\Nova\Fields\AsHTML;
 
-class Gutenberg extends Field
+class Gutenberg extends Text
 {
+
+    public $asHtml = true;
+
+    public $fullWidth = true;
+
     public $component = 'nova-gutenberg';
 
     public function disableWelcome(): self
