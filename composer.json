@@ -11,10 +11,6 @@
     {
       "type": "composer",
       "url": "https://nova.laravel.com"
-    },
-    {
-      "type": "path",
-      "url": "../laraberg"
     }
   ],
   "require": {
