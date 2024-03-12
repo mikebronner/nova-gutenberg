@@ -14,7 +14,6 @@
     }
   ],
   "require": {
-    "cweagans/composer-patches": "*",
     "laravel/nova": "^4.0",
     "symfony/thanks": "^1.2",
     "unisharp/laravel-filemanager": "*",
@@ -30,17 +29,11 @@
       "providers": [
         "GeneaLabs\\NovaGutenberg\\FieldServiceProvider"
       ]
-    },
-    "patches": {
-      "van-ons/laraberg": {
-        "PR #110: Fix z-index of block popups.": "https://github.com/mikebronner/laraberg/tree/patch-1"
-      }
     }
   },
   "config": {
     "sort-packages": true,
     "allow-plugins": {
-      "cweagans/composer-patches": true,
       "symfony/thanks": true
     }
   },
