@@ -1,4 +1,7 @@
 # Nova Gutenberg
+
+**This package has been archived in favor of using Nova's inbuilt Trix editor. Integrating Gutenberg into Laravel/Nova properly has always been riddled with issues, and it's probably better to move on to something better.**
+
 Implementation of the [Gutenberg editor](https://wordpress.org/gutenberg/) as a Laravel Nova Field based on [Laraberg](https://github.com/VanOns/laraberg).
 
 ![Gutenberg For Laravel Nova masthead image.](https://repository-images.githubusercontent.com/188099261/91913580-f1b8-11e9-8e2e-9a3f6e6da8c2)
